@@ -2,9 +2,16 @@ const express = require("express")
 const app = express()
 const port = 7000
 
+
+const dns = require("dns")
+
+dns.setServers(["1.1.1.1","8.8.8.8"])
+
+
 const configss =require("./dbconfig/config.js")   // ✅ Just require it (no variable needed)
 
 const mainrouter = require("./router/mainrouter.js")
+
 const cors = require("cors")
 
 app.use(cors())
