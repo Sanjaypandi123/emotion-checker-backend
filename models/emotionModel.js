@@ -28,12 +28,12 @@ const patientemotionsSchema = new mongoose.Schema({
 })
 
 // 👇 ADD THIS
-patientemotionsSchema.index({
-    patientName: 1,
-    date: 1,
-    session: 1
-}, {
-    unique: true
-});
+// patientemotionsSchema.index({
+//     patientName: 1,
+//     date: 1,
+//     session: 1
+// }, {
+//     unique: true
+// });
 
 module.exports = mongoose.model("patientemotions", patientemotionsSchema)
