@@ -65,8 +65,8 @@ exports.getUser = async (req, res) => {
 // GET ALL PATIENTS
 exports.getAllPatients = async (req, res) => {
     try {
-
-        const patients = await patientModel.find()
+        const docterid=req.params.docterid
+        const patients = await patientModel.find({docterID:docterid})
 
         return res.status(200).send({
             status: true,

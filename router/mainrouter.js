@@ -9,7 +9,7 @@ const { createEmotions,getpatientEmotionsbyDate ,getpatientEmotions} = require("
 router.post("/patient", createPatient)
 router.get("/patient/:userId", getUser)
 
-router.get("/patients", getAllPatients)
+router.get("/patients/:docterid", getAllPatients)
 
 router.post("/login", login)
 
